@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E3/26BAl7pfX2SmB0I7Ep53YTuaIAjoBVR4/vkQXQnLkO4lDxMjHXC90kozNNfBuSFfOFvYZw12qnB6fQyLHUA==",
+  "dgSpecHash": "MS4JGcIAutqEXUH/ec9z2R7xIBGjREm4s8GZkNspT1exAVtA5SSdSK68beIE/mVjdWECyBTYWNx2KXmBegoL3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\SalesWebMVC.csproj",
   "expectedPackageFiles": [
@@ -40,7 +40,6 @@
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.0\\microsoft.entityframeworkcore.design.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.0\\microsoft.entityframeworkcore.relational.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.0\\microsoft.entityframeworkcore.sqlserver.6.0.0.nupkg.sha512",
-    "C:\\Users\\3501034\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.0\\microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.0\\microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
@@ -61,9 +60,11 @@
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.0\\microsoft.visualstudio.web.codegeneration.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.0\\microsoft.visualstudio.web.codegeneration.core.6.0.0.nupkg.sha512",
+    "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\6.0.0\\microsoft.visualstudio.web.codegeneration.design.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.entityframeworkcore\\6.0.0\\microsoft.visualstudio.web.codegeneration.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\6.0.0\\microsoft.visualstudio.web.codegeneration.templating.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\6.0.0\\microsoft.visualstudio.web.codegeneration.utils.6.0.0.nupkg.sha512",
+    "C:\\Users\\3501034\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\6.0.0\\microsoft.visualstudio.web.codegenerators.mvc.6.0.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\3501034\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

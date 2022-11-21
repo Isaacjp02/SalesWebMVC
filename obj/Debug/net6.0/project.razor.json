@@ -16308,6 +16308,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Departments\\Edit.cshtml",
+      "TargetPath": "Views\\Departments\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -16318,13 +16323,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Departments\\Create.cshtml",
+      "TargetPath": "Views\\Departments\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Departments\\Index.cshtml",
+      "TargetPath": "Views\\Departments\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Departments\\Delete.cshtml",
+      "TargetPath": "Views\\Departments\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Departments\\Details.cshtml",
+      "TargetPath": "Views\\Departments\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],
