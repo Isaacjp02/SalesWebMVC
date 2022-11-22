@@ -24,6 +24,8 @@ namespace SalesWebMVC.Services
 
         public void Insert(Seller obj)
         {
+            // Adicionando o primeiro ID do departamento para tratar erro de chave estrngeira
+            obj.Department = _context.Department.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
