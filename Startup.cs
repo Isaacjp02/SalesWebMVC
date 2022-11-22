@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SalesWebMVC.Data;
+using SalesWebMVC.Services;
 
 namespace SalesWebMvc
 {
@@ -21,6 +22,7 @@ namespace SalesWebMvc
                     options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
 
         }

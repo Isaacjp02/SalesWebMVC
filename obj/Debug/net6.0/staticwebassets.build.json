@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PP3z+ioVcKOj3lD8CH9g3+/DCQCYBOvvVq60s7dvouY=",
+  "Hash": "P9uPg3LzVC1xxrXN1/8ONM+Fb1AC0EvWxroh0hif5C8=",
   "Source": "SalesWebMVC",
   "BasePath": "_content/SalesWebMVC",
   "Mode": "Default",
@@ -542,6 +542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min-pulse.css",
+      "SourceId": "SalesWebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\wwwroot\\",
+      "BasePath": "_content/SalesWebMVC",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min-pulse.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min-pulse.css"
     },
     {
       "Identity": "C:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",

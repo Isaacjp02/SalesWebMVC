@@ -1,0 +1,36 @@
+@model Seller
+
+@{
+    ViewData["Title"] = "Create New";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="BirthDate" class="form-label"></label>
+                <input asp-for="BirthDate" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="BaseSalary" class="form-label"></label>
+                <input asp-for="BaseSalary" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Department" class="form-label"></label>
+                <input asp-for="Department" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Create</button>
+        </form>
+    </div>
+</div>
