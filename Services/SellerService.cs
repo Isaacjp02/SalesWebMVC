@@ -32,9 +32,20 @@ namespace SalesWebMVC.Services
             _context.SaveChanges();
         }
 
+        public Seller FindById(int id)
+        {
+            //Pegar o primeiro reultado que for igual a comparação
+            return _context.Seller.FirstOrDefault(x => x.Id == id);
+        }
 
-
-
+        public void Remove(int id)
+        {
+            var obj = _context.Seller.Find(id);
+            _context.Remove(obj);
+            _context.SaveChanges();
+        }
+        
+        // Metodo para selecionar Dropsows de classes relacionadas
         public SellerFormViewModel GetDropdownValues()
         {
             var departments = _context.Department.OrderBy(x => x.Name).ToList();
