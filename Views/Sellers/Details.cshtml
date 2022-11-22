@@ -1,0 +1,32 @@
+@model Seller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr>
+
+<div>
+    <div class="card" style="max-width: 18rem;">
+        <div class="card-header">
+            Seller
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayNameFor(model => model.Name)</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.Name)</p>
+            <h5 class="card-title">@Html.DisplayNameFor(model => model.Email)</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.Email)</p>
+            <h5 class="card-title">@Html.DisplayNameFor(model => model.BirthDate)</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.BirthDate)</p>
+            <h5 class="card-title">@Html.DisplayNameFor(model => model.BaseSalary)</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.BaseSalary)</p>
+            <h5 class="card-title">@Html.DisplayNameFor(model => model.Department)</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.Department.Name)</p>
+
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary" role="button">Edit</a>
+            <a asp-action="Index">Back to List</a>
+
+        </div>
+    </div>
+</div>

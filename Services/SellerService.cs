@@ -35,7 +35,9 @@ namespace SalesWebMVC.Services
         public Seller FindById(int id)
         {
             //Pegar o primeiro reultado que for igual a comparação
-            return _context.Seller.FirstOrDefault(x => x.Id == id);
+            return _context.Seller
+            .Include(d => d.Department)
+            .FirstOrDefault(x => x.Id == id);
         }
 
         public void Remove(int id)

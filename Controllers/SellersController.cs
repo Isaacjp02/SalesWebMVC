@@ -12,12 +12,12 @@ namespace SalesWebMVC.Controllers
     {
         // Injeção de dependencia
         private readonly SellerService _sellerService;
-        
+
 
         public SellersController(SellerService sellerService)
         {
             _sellerService = sellerService;
-            
+
         }
 
         public IActionResult Index()
@@ -38,10 +38,10 @@ namespace SalesWebMVC.Controllers
         //Get Create
         //public IActionResult Create()
         //{
-            //var departments = _departmentService.FindAll();
-            //var viewModel = new SellerFormViewModel();
-            //viewModel.Departments = departments;
-            //return View(viewModel);
+        //var departments = _departmentService.FindAll();
+        //var viewModel = new SellerFormViewModel();
+        //viewModel.Departments = departments;
+        //return View(viewModel);
         //}
 
         // Post Create
@@ -71,13 +71,30 @@ namespace SalesWebMVC.Controllers
             return View(obj);
         }
 
-        // Get Delete
+        // Post Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
             _sellerService.Remove(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        // Get Detals
+        public IActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var obj = _sellerService.FindById(id.Value);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            return View(obj);
         }
 
     }
