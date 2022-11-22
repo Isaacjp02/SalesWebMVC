@@ -32,5 +32,18 @@ namespace SalesWebMVC.Services
             _context.SaveChanges();
         }
 
+
+
+
+        public SellerFormViewModel GetDropdownValues()
+        {
+            var departments = _context.Department.OrderBy(x => x.Name).ToList();
+            var data = new SellerFormViewModel(){
+                Departments = departments
+            };
+
+            return data;
+        }
+
     }
 }

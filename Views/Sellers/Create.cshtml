@@ -26,11 +26,19 @@
                 <label asp-for="Seller.BaseSalary" class="form-label"></label>
                 <input asp-for="Seller.BaseSalary" class="form-control">
             </div>
+
+            <!-- METDO 1 SELECTLIST
             <div class="mb-3">
                 <label asp-for="Seller.DepartmentId" class="form-label"></label>
-                <select asp-for="Seller.DepartmentId" class="form-control" asp-items="@(new SelectList(Model.Departments, "Id",
+                <select asp-for="Seller.DepartmentId" class="form-control" asp-items="(new SelectList(Model.Departments, "Id",
                 "Name"))"></select>
             </div>
+            -->
+            <div class="mb-3">
+                <label asp-for="Seller.DepartmentId" class="form-label"></label>
+                <select asp-for="Seller.DepartmentId" class="form-control" asp-items="ViewBag.Departments"></select>
+            </div>
+
             <button type="submit" class="btn btn-outline-primary">Create</button>
         </form>
     </div>

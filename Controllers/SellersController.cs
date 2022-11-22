@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using SalesWebMVC.Services;
 using SalesWebMVC.Models;
 using SalesWebMVC.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 
@@ -11,12 +12,12 @@ namespace SalesWebMVC.Controllers
     {
         // Injeção de dependencia
         private readonly SellerService _sellerService;
-        private readonly DepartmentService _departmentService;
+        
 
-        public SellersController(SellerService sellerService, DepartmentService departmentService)
+        public SellersController(SellerService sellerService)
         {
             _sellerService = sellerService;
-            _departmentService = departmentService;
+            
         }
 
         public IActionResult Index()
@@ -28,11 +29,20 @@ namespace SalesWebMVC.Controllers
         //Get Create
         public IActionResult Create()
         {
-            var departments = _departmentService.FindAll();
-            var viewModel = new SellerFormViewModel();
-            viewModel.Departments = departments;
-            return View(viewModel);
+            var dataDropDownList = _sellerService.GetDropdownValues();
+            // using Microsoft.AspNetCore.Mvc.Rendering; para chamar o selectlist
+            ViewBag.Departments = new SelectList(dataDropDownList.Departments, "Id", "Name");
+            return View();
         }
+
+        //Get Create
+        //public IActionResult Create()
+        //{
+            //var departments = _departmentService.FindAll();
+            //var viewModel = new SellerFormViewModel();
+            //viewModel.Departments = departments;
+            //return View(viewModel);
+        //}
 
         // Post Create
         [HttpPost]
