@@ -6,6 +6,7 @@ using SalesWebMVC.Models;
 using SalesWebMVC.Data;
 using SalesWebMVC.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using SalesWebMVC.Services.Exceptions;
 
 namespace SalesWebMVC.Services
 {
@@ -19,7 +20,7 @@ namespace SalesWebMVC.Services
         }
 
         public List<Seller> FindAll()
-        {   
+        {
             // To list tem referencia ao system Linq
             return _context.Seller
             .Include(d => d.Department)
@@ -35,6 +36,7 @@ namespace SalesWebMVC.Services
         public Seller FindById(int id)
         {
             //Pegar o primeiro reultado que for igual a comparação
+            // Eager loading
             return _context.Seller
             .Include(d => d.Department)
             .FirstOrDefault(x => x.Id == id);
@@ -46,12 +48,33 @@ namespace SalesWebMVC.Services
             _context.Remove(obj);
             _context.SaveChanges();
         }
-        
+
+        public void Update(Seller obj)
+        {
+            if (!_context.Seller.Any(x => x.Id == obj.Id))
+            {
+                throw new NotFoundException("Id not found");
+            }
+
+            try
+            {
+                _context.Update(obj);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+
+                throw new DbConcurrencyException(e.Message);
+            }
+
+        }
+
         // Metodo para selecionar Dropsows de classes relacionadas
         public SellerFormViewModel GetDropdownValues()
         {
             var departments = _context.Department.OrderBy(x => x.Name).ToList();
-            var data = new SellerFormViewModel(){
+            var data = new SellerFormViewModel()
+            {
                 Departments = departments
             };
 

@@ -1,0 +1,47 @@
+@model SellerFormViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden"asp-for="Seller.Id">
+            <div class="mb-3">
+                <label asp-for="Seller.Name" class="form-label"></label>
+                <input asp-for="Seller.Name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Seller.Email" class="form-label"></label>
+                <input asp-for="Seller.Email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Seller.BirthDate" class="form-label"></label>
+                <input asp-for="Seller.BirthDate" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Seller.BaseSalary" class="form-label"></label>
+                <input asp-for="Seller.BaseSalary" class="form-control">
+            </div>
+
+            <!-- METDO 1 SELECTLIST
+            <div class="mb-3">
+                <label asp-for="Seller.DepartmentId" class="form-label"></label>
+                <select asp-for="Seller.DepartmentId" class="form-control" asp-items="(new SelectList(Model.Departments, "Id",
+                "Name"))"></select>
+            </div>
+            -->
+            <div class="mb-3">
+                <label asp-for="Seller.DepartmentId" class="form-label"></label>
+                <select asp-for="Seller.DepartmentId" class="form-control" asp-items="ViewBag.Departments"></select>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary">Save</button>
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+</div>
