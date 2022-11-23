@@ -51,6 +51,21 @@ namespace SalesWebMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Seller seller)
         {
+            if (!ModelState.IsValid)
+            {
+                var dataDropDownList = _sellerService.GetDropdownValues();
+                ViewBag.Departments = new SelectList(dataDropDownList.Departments, "Id", "Name");
+                var viewModel = new SellerFormViewModel()
+                {
+                    Seller = seller,
+                    Departments = dataDropDownList.Departments
+
+                };
+
+                return View(viewModel);
+
+            }
+
             // Não e necessario modificar o insert para referenciar outras classes
             _sellerService.Insert(seller);
             return RedirectToAction(nameof(Index));
@@ -61,13 +76,13 @@ namespace SalesWebMVC.Controllers
         {
             if (id == null)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id not provided"});
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" });
             }
 
             var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id not found"});
+                return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
 
             return View(obj);
@@ -87,13 +102,13 @@ namespace SalesWebMVC.Controllers
         {
             if (id == null)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id not provided"});;
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" }); ;
             }
 
             var obj = _sellerService.FindById(id.Value);
             if (obj == null)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id not found"});
+                return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
 
             return View(obj);
@@ -104,22 +119,23 @@ namespace SalesWebMVC.Controllers
         {
             if (id == null)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id not provided"});
+                return RedirectToAction(nameof(Error), new { message = "Id not provided" });
             }
 
             var obj = _sellerService.FindById(id.Value);
 
             if (obj == null)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id not found"});
+                return RedirectToAction(nameof(Error), new { message = "Id not found" });
             }
-
+            var dataDropDownList = _sellerService.GetDropdownValues();
+            ViewBag.Departments = new SelectList(dataDropDownList.Departments, "Id", "Name");
             var data = new SellerFormViewModel()
             {
                 Seller = obj,
+                Departments = dataDropDownList.Departments
             };
-            var dataDropDownList = _sellerService.GetDropdownValues();
-            ViewBag.Departments = new SelectList(dataDropDownList.Departments, "Id", "Name");
+
 
             return View(data);
         }
@@ -129,9 +145,25 @@ namespace SalesWebMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Seller seller)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var dataDropDownList = _sellerService.GetDropdownValues();
+                ViewBag.Departments = new SelectList(dataDropDownList.Departments, "Id", "Name");
+                var viewModel = new SellerFormViewModel()
+                {
+                    Seller = seller,
+                    Departments = dataDropDownList.Departments
+
+                };
+
+                return View(viewModel);
+
+            }
+
             if (id != seller.Id)
             {
-                return RedirectToAction(nameof(Error), new{ message = "Id mismatch"});
+                return RedirectToAction(nameof(Error), new { message = "Id mismatch" });
             }
             try
             {
@@ -141,7 +173,7 @@ namespace SalesWebMVC.Controllers
             catch (ApplicationException e)
             {
 
-                return RedirectToAction(nameof(Error), new{ message = e.Message});
+                return RedirectToAction(nameof(Error), new { message = e.Message });
             }
 
         }

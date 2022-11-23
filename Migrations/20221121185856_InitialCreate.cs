@@ -64,6 +64,7 @@ namespace SalesWebMVC.Migrations
                         column: x => x.SellerId,
                         principalTable: "Seller",
                         principalColumn: "Id",
+                        //Realizar um estudo de como resolver exclusões em cascata
                         onDelete: ReferentialAction.Cascade);
                 });
 
