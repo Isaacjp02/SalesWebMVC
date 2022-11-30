@@ -53,7 +53,7 @@ namespace SalesWebMVC.Services
             catch (DbUpdateException e)
             {
 
-                throw new IntegrityException("Não pode deletar o vendedor pois eles está associado!");
+                throw new IntegrityException(e.Message);
             }
         }
 

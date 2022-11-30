@@ -16323,6 +16323,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\SalesRecords\\SimpleSearch.cshtml",
+      "TargetPath": "Views\\SalesRecords\\SimpleSearch.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Sellers\\Index.cshtml",
       "TargetPath": "Views\\Sellers\\Index.cshtml",
       "FileKind": "mvc"
@@ -16340,6 +16345,11 @@
     {
       "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\SalesRecords\\GroupingSearch.cshtml",
+      "TargetPath": "Views\\SalesRecords\\GroupingSearch.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16370,6 +16380,11 @@
     {
       "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\Sellers\\Edit.cshtml",
       "TargetPath": "Views\\Sellers\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\3501034\\Desktop\\ESTUDO\\DESENVOLVIMENTO\\SalesWebMVC\\Views\\SalesRecords\\Index.cshtml",
+      "TargetPath": "Views\\SalesRecords\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
