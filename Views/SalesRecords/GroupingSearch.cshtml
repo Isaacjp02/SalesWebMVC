@@ -1,6 +1,58 @@
+@model IEnumerable<IGrouping<Department, SalesRecord>>
+
 @{
     ViewData["Title"] = "Grouping Search";
+    DateTime minDate = DateTime.Parse(ViewData["minDate"] as string);
+    DateTime maxDate = DateTime.Parse(ViewData["maxDate"] as string);
 }
 
 <h1>@ViewData["Title"]</h1>
 <hr>
+
+<nav class=" navbar nacbar-inserse">
+    <div class="container-fluid">
+        <form class="nav-form-group navbar-left" role="search">
+            <div class="form-group">
+                <label for="minDate">Min Date</label>
+                <input type="date" class="form-control" name="minDate" value=@ViewData["minDate"]>
+            </div>
+            <div class="form-group">
+                <label for="maxDate">Max Date</label>
+                <input type="date" class="form-control" name="maxDate" value=@ViewData["maxDate"]>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Filter</button>
+        </form>
+    </div>
+</nav>
+
+@foreach (var departmentgrup in Model)
+{
+    <div class="card">
+        <div class="card-head">
+            <h3 class="card-title">Department @departmentgrup.Key.Name, Total sales = @departmentgrup.Key.TotalSales(minDate, maxDate).ToString("F2")</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="success">
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Seller</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in departmentgrup)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Seller.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

@@ -36,7 +36,7 @@ namespace SalesWebMVC.Models
         {
         }
 
-        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department, int departmentId, List<SalesRecord> sales)
+        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department, int departmentId)
         {
             Id = id;
             Name = name;
@@ -45,7 +45,7 @@ namespace SalesWebMVC.Models
             BaseSalary = baseSalary;
             Department = department;
             DepartmentId = departmentId;
-            Sales = sales;
+            
         }
 
         // Metodos
